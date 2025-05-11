@@ -1,0 +1,1285 @@
+﻿<!doctype html>
+<html lang="ru" class="no-js notranslate" translate="no">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="ru">
+
+  <link rel="stylesheet" type="text/css" href="/css/main-style.min.css">
+
+  <style type="text/css">
+    .order-block {
+      background: #F7F9F9;
+      padding: 40px;
+      /* Увеличиваем отступы */
+      margin: 20px auto;
+      /* Центрирование блока */
+      max-width: 600px;
+      /* Ограничиваем максимальную ширину */
+      border-radius: 8px;
+      /* Скругление углов */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      /* Небольшая тень */
+    }
+
+
+
+
+
+    .order-block h2 {
+      font-size: 28px;
+      /* Увеличиваем размер заголовка */
+      color: #333333;
+      /* Цвет заголовка */
+    }
+
+    .order-block-info-heading {
+      font-size: 18px;
+      /* Увеличиваем размер текста */
+      color: #555;
+      /* Цвет текста */
+    }
+
+    .order-block-info-heading strong {
+      display: inline-block;
+      /* Для лучшего выравнивания */
+      margin-bottom: 10px;
+      /* Отступ снизу */
+    }
+
+    .ulist {
+      font-size: 14px;
+      line-height: 1.43;
+    }
+
+    .rlist {
+      font-size: 0;
+      line-height: 0;
+    }
+
+    .merchant-page .datepickers-container {
+      z-index: 90000;
+    }
+
+    body.merchant-page footer .footer__top .footer__bar>li:first-child {
+      text-align: left;
+    }
+
+    body.merchant-page {
+      min-width: 310px;
+    }
+
+    body.merchant-page .spinner {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      margin: 10px auto;
+    }
+
+    body.merchant-page .spinner .double-bounce1,
+    body.merchant-page .spinner .double-bounce2 {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #ffffff;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-animation: sk-bounce 2s infinite ease-in-out;
+      animation: sk-bounce 2s infinite ease-in-out;
+    }
+
+    body.merchant-page .spinner .double-bounce2 {
+      -webkit-animation-delay: -1s;
+      animation-delay: -1s;
+    }
+
+    @-webkit-keyframes sk-bounce {
+
+      0%,
+      100% {
+        -webkit-transform: scale(0);
+      }
+
+      50% {
+        -webkit-transform: scale(1);
+      }
+    }
+
+    @keyframes sk-bounce {
+
+      0%,
+      100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+    }
+
+    body.merchant-page .row.no-side-margins {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    body.merchant-page main.main {
+      padding-top: 0;
+      background: #fff;
+    }
+
+    body.merchant-page.guest-page .main {
+      background: #fff;
+    }
+
+    body.merchant-page .container {
+      width: auto !important;
+    }
+
+    body.merchant-page .merchant-block hr {
+      border: none;
+      border-top: 1px solid #E0EAF0;
+      height: 1px;
+    }
+
+    body.merchant-page .merchant-block .merchant-block-info {
+      margin-top: 56px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: -ms-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-align-items: flex-start;
+      -ms-align-items: flex-start;
+      align-items: flex-start;
+    }
+
+    body.merchant-page .merchant-block .merchant-block-info .merchant-description {
+      line-height: 1.5em;
+      font-size: 14px;
+      margin-top: 6px;
+      color: #A3A3A4;
+    }
+
+    body.merchant-page .merchant-block .merchant-block-info .merchant-url a,
+    body.merchant-page .merchant-block .merchant-block-info .merchant-url a:hover {
+      line-height: 24px;
+      font-size: 15px;
+      text-decoration-line: underline;
+      color: #82BA2E;
+    }
+
+    body.merchant-page .merchant-block .merchant-block-info .merchant-name {
+      line-height: 25px;
+      font-size: 16px;
+      color: #333333;
+      margin-top: 0.5em;
+    }
+
+    body.merchant-page .merchant-block .merchant-block-info .merchant-logo {
+      height: 60px;
+      box-sizing: border-box;
+    }
+
+    body.merchant-page .merchant-block .merchant-block-info .merchant-logo img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    body.merchant-page .merchant-block .merchant-block-info .info-icon {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      -webkit-flex-grow: 0;
+      -ms-flex-grow: 0;
+      flex-grow: 0;
+      -webkit-flex-shrink: 0;
+      -ms-flex-shrink: 0;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      background: #fdfdfd;
+      font-size: 20px;
+      line-height: 36px;
+      text-align: center;
+      margin-right: 30px;
+    }
+
+    body.merchant-page .order-payways-block h3 {
+      font-size: 22px;
+      color: #333333;
+    }
+
+    body.merchant-page .order-payways-block .payway-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: ". .";
+      margin-top: 30px;
+    }
+
+    body.merchant-page .order-payways-block .payway-list .payway-block {
+      margin: 0 auto 25px 0;
+      cursor: pointer;
+    }
+
+    body.merchant-page .order-payways-block .payway-list .payway-block:hover .payway-button,
+    body.merchant-page .order-payways-block .payway-list .payway-block.payway-block-active .payway-button {
+      border: 1px solid #82BA2E;
+    }
+
+    body.merchant-page .order-payways-block .payway-list .payway-block .payway-button {
+      background: #FFFFFF;
+      border: 1px solid #E0EAF0;
+      box-sizing: border-box;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      width: 200px;
+      height: 110px;
+      margin: 0 auto;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: -ms-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -webkit-align-content: center;
+      -ms-align-content: center;
+      align-content: center;
+    }
+
+    body.merchant-page .order-payways-block .payway-list .payway-block .payway-button img {
+      max-width: 80%;
+      max-height: 80%;
+      margin: auto;
+    }
+
+    body.merchant-page .order-payways-block .payway-list .payway-block .payway-label {
+      margin-top: 15px;
+      line-height: 21px;
+      font-size: 13px;
+      color: #333333;
+      text-align: center;
+    }
+
+    body.merchant-page .order-block {
+      background: #F7F9F9;
+      padding-top: 40px;
+    }
+
+    body.merchant-page .order-block h2 {
+      line-height: 41px;
+      font-size: 26px;
+      color: #333333;
+      font-weight: bolder;
+    }
+
+    body.merchant-page .order-block .order-block-info-heading {
+      margin-bottom: 1em;
+    }
+
+    body.merchant-page .order-block .order-block-info-heading .paid-heading {
+      color: #82BA2E;
+    }
+
+    body.merchant-page .order-block .order-block-info-heading .canceled-heading {
+      color: red;
+    }
+
+    body.merchant-page .order-block .order-block-info .hrbtm {
+      border-bottom: 1px solid #E0EAF0;
+    }
+
+    body.merchant-page .order-block .order-block-info .block-padding {
+      padding: 5px;
+    }
+
+    body.merchant-page .order-block .order-block-info .table-1-wide {
+      display: none;
+    }
+
+    body.merchant-page .order-block .order-block-info .table-1-wide .order-description-heading {
+      background: #F3F7FA;
+      font-size: 15px;
+      line-height: 24px;
+      color: #333333;
+      padding: 12px 14px;
+      font-weight: bolder;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+
+
+      body.merchant-page .order-block .order-block-info .table-1-wide .order-details-grid .order-status.order-paid {
+        color: #00aa00;
+      }
+
+      body.merchant-page .order-block .order-block-info .table-1-wide .order-details-grid .order-status.order-inprocess {
+        color: #333333;
+      }
+
+      body.merchant-page .order-block .order-block-info .table-1-wide .order-details-grid .order-status.order-canceled {
+        color: #870a0c;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 {
+        width: 100%;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 td,
+      body.merchant-page .order-block .order-block-info table.table-1 th {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 td:first-child,
+      body.merchant-page .order-block .order-block-info table.table-1 th:first-child {
+        padding-left: 20px;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 td:last-child,
+      body.merchant-page .order-block .order-block-info table.table-1 th:last-child {
+        padding-right: 20px;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 .order-date {
+        color: #969EA4;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 .order-description {
+        font-weight: bolder;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 .order-status {
+        width: 23%;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 .order-status.order-paid {
+        color: #00aa00;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 .order-status.order-inprocess {
+        color: #333333;
+      }
+
+      body.merchant-page .order-block .order-block-info table.table-1 .order-status.order-canceled {
+        color: #870a0c;
+      }
+
+
+
+
+      body.merchant-page .order-block .order-block-info .amount .amount-amount {
+        line-height: 24px;
+        font-size: 24px;
+        color: #333333;
+      }
+
+      body.merchant-page .secured-data-label {
+        font-size: 14px;
+        color: #B9C2CA;
+        padding: 16px 0;
+        line-height: 15px;
+      }
+
+      body.merchant-page .secured-data-label i {
+        margin-bottom: 3px;
+        margin-right: 5px;
+      }
+
+      body.merchant-page .order-payway-payment-form .saved-cards-notice {
+        padding: 1em 0;
+      }
+
+      body.merchant-page .order-payway-payment-form .saved-cards-notice a {
+        border-bottom: 1px dashed #537a12;
+        color: #537a12;
+      }
+
+      body.merchant-page .order-payway-payment-form .checkbox {
+        user-select: none;
+        display: flex;
+      }
+
+      body.merchant-page .order-payway-payment-form .checkbox label {
+        padding-left: 0;
+        font-weight: bolder;
+      }
+
+      body.merchant-page .order-payway-payment-form .checkbox input[type=checkbox]+div:before {
+        content: '\00a0';
+        font-family: 'capitalist-icons';
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        display: inline-block;
+        margin-right: 15px;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background: #d5d7e5;
+        transition: 0.3s;
+      }
+
+      body.merchant-page .order-payway-payment-form .checkbox input[type=checkbox]+div {
+        display: flex;
+      }
+
+      body.merchant-page .order-payway-payment-form .checkbox input[type=checkbox]:checked+div:before {
+        content: "\f00c";
+        background: #80bd1c;
+        transition: 0.3s;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .form-control {
+        font-weight: 300;
+        font-family: 'Proxima Nova Lt', sans-serif;
+        position: relative;
+        text-align: left;
+        box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+        background-color: #f2f3f8;
+        border: none;
+        padding: 9px 15px;
+        height: auto;
+        line-height: 30px;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group.has-error .form-control {
+        background: rgba(169, 68, 66, 0.12);
+        color: #a94442;
+        font-weight: bolder;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group [data-toggle="dropdown"]:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: #333 transparent transparent transparent;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .dropdown {
+        position: relative;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .dropdown button.form-control {
+        height: 48px;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .dropdown button.form-control span {
+        height: 30px;
+        display: block;
+        float: left;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .dropdown .dropdown-menu {
+        right: 0;
+        padding: 0;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .dropdown .dropdown-menu li {
+        line-height: 30px;
+        display: block;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .dropdown .dropdown-menu li a {
+        padding: 9px 15px;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group.has-error .control-label {
+        color: #a94442;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group.has-error input[type="text"].form-control {
+        background: rgba(169, 68, 66, 0.12);
+        color: #a94442;
+        font-weight: bolder;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .control-label {
+        font-weight: bolder;
+        font-size: 15px;
+        color: #2C3437;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .control-label.required:after {
+        content: '*';
+        color: #e13e33;
+        margin-left: 0.4ex;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .help-block {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #A3A3A4;
+      }
+
+      body.merchant-page .order-payway-payment-form .form-group .help-block.has-error {
+        color: #a94442;
+      }
+
+      body.merchant-page .awaiting-step h4 {
+        margin: 1.5em 0 0 0;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+
+      body.merchant-page .awaiting-step .bitcoin-address-block {
+        margin-top: 1em;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+      }
+
+      body.merchant-page .awaiting-step .bitcoin-address-block div:last-child {
+        width: 100%;
+      }
+
+      body.merchant-page .awaiting-step .bitcoin-address-block .bitcoin-address-btn {
+        background: #F4F5F7;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        font-weight: bolder;
+        font-size: 16px;
+        line-height: 22px;
+        border: none;
+        padding: 0.5em 20px;
+        width: 100%;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+      }
+
+      body.merchant-page .awaiting-step .bitcoin-address-block .bitcoin-address-btn span {
+        overflow: hidden;
+        -webkit-flex-shrink: 1;
+        -ms-flex-shrink: 1;
+        flex-shrink: 1;
+        -webkit-flex-grow: 0.9;
+        -ms-flex-grow: 0.9;
+        flex-grow: 0.9;
+      }
+
+      body.merchant-page .awaiting-step .bitcoin-address-block .bitcoin-address-btn i {
+        -webkit-flex-shrink: 0;
+        -ms-flex-shrink: 0;
+        flex-shrink: 0;
+        margin-left: 10px;
+      }
+
+      body.merchant-page .awaiting-step .bitcoin-address-block .qrcode {
+        width: 125px;
+        height: 125px;
+        -webkit-flex-grow: 0;
+        -ms-flex-grow: 0;
+        flex-grow: 0;
+        -webkit-flex-shrink: 0;
+        -ms-flex-shrink: 0;
+        flex-shrink: 0;
+        margin: 0 20px 10px 0;
+      }
+
+      body.merchant-page .awaiting-step .bitcoin-address-block .qrcode .qrcode-img-wrap {
+        width: 125px;
+        height: 125px;
+        background: #eee;
+      }
+
+      body.merchant-page .awaiting-step .bitcoin-address-block .qrcode img {
+        width: 125px;
+        height: 125px;
+      }
+
+      body.merchant-page .order-payment-modal .payway-logo {
+        margin-top: 20px;
+      }
+
+      body.merchant-page .order-payment-modal .payway-logo div {
+        height: 45px;
+        width: 200px;
+      }
+
+      body.merchant-page .order-payment-modal .payway-logo div img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      body.merchant-page .order-payment-modal.modal {
+        text-align: center;
+        padding: 0 !important;
+      }
+
+      body.merchant-page .order-payment-modal.modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-content .modal-dialog-loading {
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background: rgba(255, 255, 255, 0.71);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 0 !important;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-content .modal-dialog-loading:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-content .modal-dialog-loading div.sk-fading-circle {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-title {
+        line-height: 25px;
+        font-size: 22px;
+        font-weight: bolder;
+        color: #2C3437;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .close {
+        font-size: 33px;
+        line-height: 25px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress {
+        height: 13px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        margin-bottom: 15px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress .order-mini-step {
+        height: 13px;
+        width: 50%;
+        position: relative;
+        z-index: 1;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress .order-mini-step.arrow_box {
+        z-index: 5;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress .order-mini-step.arrow_box:after,
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress .order-mini-step.arrow_box:before {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress .order-mini-step.arrow_box:after {
+        border-color: rgba(185, 223, 128, 0);
+        border-left-color: #B9DF80;
+        border-width: 6px;
+        margin-top: -6px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress .order-mini-step.arrow_box:before {
+        border-color: rgba(255, 255, 255, 0);
+        border-left-color: #FFFFFF;
+        border-width: 10px;
+        margin-top: -10px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress .order-mini-step:first-child {
+        background: #B9DF80;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress .order-mini-step:last-child {
+        background: #eee;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .order-mini-progress.progress-step-2 .order-mini-step:last-child {
+        background: #82BA2E;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-header {
+        padding: 30px 40px 10px 40px;
+        border-bottom: none;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-body {
+        padding: 10px 40px 10px 40px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-footer {
+        padding: 10px 40px 30px 40px;
+        border-top: none;
+        text-align: left;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-footer .order-mini-details {
+        border-top: 1px solid #E0EAF0;
+        padding-top: 20px;
+        margin-top: 10px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-footer .order-mini-details h4 {
+        font-weight: bolder;
+        line-height: 25px;
+        font-size: 16px;
+        color: #333333;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-footer .order-mini-details .mini-label,
+      body.merchant-page .order-payment-modal .modal-dialog .modal-footer .order-mini-details .mini-value {
+        line-height: 22px;
+        font-size: 14px;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-footer .order-mini-details .mini-label {
+        color: #A3A3A4;
+      }
+
+      body.merchant-page .order-payment-modal .modal-dialog .modal-footer .order-mini-details .mini-value {
+        color: #333333;
+      }
+
+      @media screen and (max-width: 500px) {
+        body.merchant-page .order-block .order-block-info .table-1 {
+          display: none;
+        }
+
+        body.merchant-page .order-block .order-block-info .table-1-wide {
+          display: block;
+        }
+      }
+
+      .merchants-not-found {
+        padding: 30px;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 720px) {
+        body.merchant-page .order-payways-block .payway-list {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-template-areas: ". .";
+        }
+
+        body.merchant-page .order-payways-block .payway-list .payway-block {
+          width: 90%;
+        }
+
+        body.merchant-page .order-payways-block .payway-list .payway-block .payway-button {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+        body.merchant-page .merchant-block .merchant-block-info .info-icon {
+          display: none;
+        }
+
+        body.merchant-page footer .footer__top .footer__bar {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: -ms-flex;
+          display: flex;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-justify-content: space-between;
+          -ms-justify-content: space-between;
+          justify-content: space-between;
+          margin-bottom: -30px;
+        }
+
+        body.merchant-page footer .footer__top .footer__bar>li {
+          -webkit-flex-grow: 1;
+          -ms-flex-grow: 1;
+          flex-grow: 1;
+          -webkit-flex-shrink: 0.5;
+          -ms-flex-shrink: 0.5;
+          flex-shrink: 0.5;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+
+        body.merchant-page footer .footer__top .footer__bar>li:first-child {
+          -webkit-flex-grow: 1;
+          -ms-flex-grow: 1;
+          flex-grow: 1;
+          width: auto;
+          text-align: center;
+        }
+
+        body.merchant-page footer .footer__top .footer__bar>li:last-child {
+          -webkit-flex-grow: 1;
+          -ms-flex-grow: 1;
+          flex-grow: 1;
+          width: 100%;
+          text-align: center;
+        }
+
+        body.merchant-page .order-payment-modal.modal:before {
+          height: 15px;
+        }
+
+        body.merchant-page .order-payment-modal .modal-dialog .modal-body,
+        body.merchant-page .order-payment-modal .modal-dialog .modal-header,
+        body.merchant-page .order-payment-modal .modal-dialog .modal-footer {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        body.merchant-page .awaiting-step .bitcoin-address-block {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: -ms-flex;
+          display: flex;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+
+        body.merchant-page .awaiting-step .bitcoin-address-block .bitcoin-address-btn {
+          word-break: break-all;
+        }
+
+        body.merchant-page .awaiting-step .bitcoin-address-block .qrcode {
+          margin: 0 auto 15px auto;
+        }
+      }
+
+
+  </style>
+
+  <title>Capitalist.net</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Capitalist.net">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+  <link rel="apple-touch-icon" href="../../../apple-touch-icon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="../../../apple-touch-icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../apple-touch-icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../../apple-touch-icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../../apple-touch-icon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon/apple-touch-icon-180x180.png">
+</head>
+
+<body class="guest-page merchant-page ">
+
+
+  <header class="header" id="page-guest-header">
+
+    <div class="nav header__nav">
+      <div
+        class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <div class="container">
+          <ul class="nav__guest">
+            <li class="alogo"><a href="/">
+                <img src="/images/sweetsnights.svg" width="155" height="50">
+              </a></li>
+            <li class="sep"></li>
+            <li></li>
+            <li class="menu-lang">
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+  <style type="text/css">
+    .menu-lang .lng-switcher__toggle {
+      text-transform: uppercase;
+    }
+  </style>
+  </div>
+  <main class="main">
+    <div class="container">
+      <div class="order-block">
+        <h2>Информация о заказе</h2>
+        <div class="order-block-info">
+          <div class="order-block-info-heading">
+            <strong>Дата встречи:</strong>
+            <span id="orderDate" class="order-date"></span><br>
+            <strong>Время встречи:</strong>
+            <span id="orderTime" class="order-time"></span><br>
+            <strong>Место встречи:</strong>
+            <span id="orderPlace" class="order-place"></span><br>
+            <strong>Тариф:</strong>
+            <span id="orderTariff" class="order-tariff"></span><br>
+            <strong>Предпочтения:</strong>
+            <span id="orderPreferences" class="order-preferences"></span><br>
+            <strong>Контакт:</strong>
+            <span id="orderContact" class="order-contact"></span><br>
+            <strong>Сумма к оплате:</strong>
+            <span id="orderAmount" class="order-amount"></span> рублей
+          </div>
+        </div>
+        <div class="amount-wrap">
+          <button id="payButton" class="btn btn-success">Оплатить</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">×</span>
+      <h2>Оплата заказа</h2>
+      <p>Переведите сумму на карту:</p>
+
+      <div class="card">
+        <div class="card-info">
+          <span class="card-number">4085 1234 5678 9123</span>
+          <span class="card-expiry">12/25</span>
+        </div>
+      </div>
+
+      <br>
+      <p>Загрузите скриншот чека оплаты:</p>
+      <input type="file" id="screenshotInput" accept="image/*">
+      <button id="confirmPayment" class="btn btn-success">Оплата выполнена</button>
+    </div>
+  </div>
+<script>
+fetch('./pay/card.txt') // Путь к файлу в папке pay
+  .then(response => response.text())
+  .then(text => {
+    const lines = text.split('\n');
+    const firstLine = lines[0].trim();
+    document.querySelector('.card-number').textContent = firstLine;
+  })
+  .catch(err => console.error('Ошибка загрузки файла:', err));
+</script>
+  <script>
+
+    window.onload = function () {
+      const orderData = JSON.parse(localStorage.getItem('orderData'));
+
+      if (orderData) {
+        document.getElementById('orderDate').textContent = orderData.date || 'Не указано';
+        document.getElementById('orderTime').textContent = orderData.time || 'Не указано';
+        document.getElementById('orderPlace').textContent = orderData.place || 'Не указано';
+        document.getElementById('orderTariff').textContent = orderData.tariff || 'Не указано';
+        document.getElementById('orderContact').textContent = orderData.contact || 'Не указано';
+        document.getElementById('orderAmount').textContent = orderData.amount || '0'; 
+        document.getElementById('orderPreferences').textContent = orderData.preferences || 'Не указаны'; 
+      } else {
+        console.error("Нет данных о заказе.");
+      }
+
+
+      document.getElementById('paymentModal').style.display = "none";
+
+
+      document.getElementById('payButton').onclick = function () {
+        document.getElementById('paymentModal').style.display = "flex"; 
+      };
+
+
+      document.getElementById('closeModal').onclick = function () {
+        document.getElementById('paymentModal').style.display = "none";
+      };
+
+
+      window.onclick = function (event) {
+        if (event.target == document.getElementById('paymentModal')) {
+          document.getElementById('paymentModal').style.display = "none"; 
+        }
+      };
+
+
+      document.getElementById('confirmPayment').onclick = function () {
+        const fileInput = document.getElementById('screenshotInput');
+        if (fileInput.files.length > 0) {
+          alert("Спасибо! Ваш скриншот отправлен.");
+          document.getElementById('paymentModal').style.display = "none"; 
+        } else {
+          alert("Пожалуйста, загрузите скриншот чека оплаты.");
+        }
+      };
+    };
+  </script>
+
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 500px;
+
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: black;
+    }
+
+
+    .card {
+      background: linear-gradient(135deg, #ff2b2b, #ffef3e);
+      border-radius: 10px;
+      padding: 70px;
+      text-align: center;
+      margin: 50px 0;
+      color: white;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    .card-number {
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .card-expiry {
+      font-size: 0.9em;
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+    }
+
+    .card-logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+
+
+    .btn {
+      background-color: #28a745;
+
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+
+    }
+
+
+    input[type="file"] {
+      margin: 10px 0;
+    }
+  </style>
+
+
+  </main>
+  <footer class="footer">
+    <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+      <div class="footer__top">
+        <div class="container">
+          <ul class="footer__bar" style="align-items: center;">
+            <li><a href="/">
+
+                <div class="footer__logo">
+                  <img src="../../../capassets/layout/images/cap-logo-footer.svg" width="155" height="50">
+                </div>
+              </a>
+
+            </li>
+            <li>
+
+              <ul class="social-row">
+
+                <li><a href="https://vk.com/capitalist_net" target="_blank"><i class="social-icon"><i
+                        class="capitalist-icon-social-vk"></i></i></a></li>
+
+                <li><a href="https://t.me/Capitalist_net" target="_blank"><i class="social-icon"><i
+                        class="capitalist-icon-telegram"></i></i></a></li>
+
+                <li><a href="https://www.linkedin.com/company/capitalist-inc/" target="_blank">
+                    <i class="social-icon capitalist-icon-linkedin-inverted"></i>
+                  </a></li>
+
+                <li><a href="https://www.youtube.com/channel/UCR3XzSUhKyacrC9E286hEIw" target="_blank">
+                    <i class="social-icon capitalist-icon-youtube"></i>
+                  </a></li>
+              </ul>
+
+
+            </li>
+            <li class="footer__top__right">
+              <div class="footer__top__right__links">
+                <a href="/useragreement">Пользовательское соглашение</a>
+              </div>
+            </li>
+          </ul>
+
+
+
+          <div
+            style="display: grid; grid-gap: 30px; justify-content: center;
+            grid-template-columns: max-content max-content; align-items: center; grid-template-columns: max-content max-content;">
+            <div style="height: 40px;
+    display: grid;
+    align-items: center;
+    padding-top: 16px;">
+            </div>
+          </div>
+
+
+          <hr>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          </p>-->
+          <ul>
+            <li>
+              <p>
+                &copy; <a href="https://capitalist.net">Capitalist.net</a>,
+                <span>2025</span>. Все права защищены.
+              </p>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
