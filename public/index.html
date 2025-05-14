@@ -18,10 +18,7 @@
 	<meta name="twitter:card" content="summary">
 
 	<link href="../css/app.css" rel="stylesheet">
-
-
-	<link rel="stylesheet" href="../css/style2.css">
-
+<link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
 
 
 	<meta name="format-detection" content="telephone=no">
@@ -209,7 +206,7 @@
 			<div class="footer__grid">
 				<div class="footer__copyright">
 					<a class="footer__logo">
-						<img loading="lazy" src="/images/sweetsnights.svg" alt="Sweetnights сайт интимных знакомств"
+						<img loading="lazy" src="../images/sweetsnights.svg" alt="Sweetnights сайт интимных знакомств"
 							height="38" width="134">
 					</a>
 					<p>&copy; 2021–2025, Sweetnights —
@@ -240,7 +237,7 @@
 					</ul>
 				</div>
 				<div class="footer__mark">
-					<img loading="lazy" src="#" alt="Сайт 18+" width="38" height="38">
+					<img loading="lazy" src="../images/logo.svg" alt="Сайт 18+" width="38" height="38">
 				</div>
 			</div>
 		</div>
@@ -417,7 +414,7 @@
 					const path = anketa.path;
 					const isIndividual = anketa.individual;
 		
-					// ✅ ПРАВИЛЬНЫЕ пути
+
 					const url = isIndividual ? `individual_ankets/${path}` : `html/${path}`;
 		
 					const response = await fetch(url);
@@ -485,7 +482,7 @@
                 slide.style.opacity = '0';
                 setTimeout(() => {
                     slide.style.display = 'none';
-                }, 400); // время совпадает с transition в CSS
+                }, 400); 
             }
         });
 
@@ -547,7 +544,59 @@ toggleBtn.addEventListener('click', () => {
 
 	
   
-	  
-		
-		
-</html> 	
+<script>
+function showNotification(message) {
+    const notification = document.getElementById('notification');
+    notification.innerText = message;
+
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+
+        notification.style.position = 'fixed';
+        notification.style.top = '20px'; 
+    } else {
+
+        const scrollY = window.scrollY || window.pageYOffset;  
+
+        notification.style.position = 'fixed';
+        notification.style.top = `${scrollY + 100}px`;  
+    }
+
+    notification.style.left = '50%';  
+    notification.style.transform = 'translateX(-50%)';  
+
+    notification.style.display = 'block';
+
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 3000);
+}
+</script>
+
+
+
+<style>
+#notification {
+    position: fixed; 
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    z-index: 9999;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+@media (max-width: 600px) {
+    #notification {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+}
+</style>
