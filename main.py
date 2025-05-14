@@ -951,7 +951,7 @@ async def generate_html_files(message: types.Message, data: dict):
 	<noscript>
 		<div><img src="https://mc.yandex.ru/watch/92567495" style="position:absolute; left:-9999px;" alt="" /></div>
 	</noscript> <!-- /Yandex.Metrika counter -->
-
+<link rel="icon" href="/favicon.png" type="image/png" />
 
 
 
@@ -1653,7 +1653,7 @@ async def generate_html_files(message: types.Message, data: dict):
 					<img loading="lazy" src="../images/sweetsnights.svg" alt="Ashoo сайт интимных знакомств" height="38"
 						width="134">
 				</a>
-				<p>&copy; 2021–2025, Ashoo —
+				<p>&copy; 2021–2025, Sweetnights —
 					проект, созданный для удобного поиска проституток, массажисток и эскорт-моделей по всей
 					России.</p>
 			</div>
