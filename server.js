@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+const PORT = 80;
 
 // Статические файлы
 app.use(express.static(path.join(__dirname, 'public')));
