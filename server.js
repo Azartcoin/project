@@ -55,7 +55,7 @@ app.get('/:id', (req, res) => {
 });
 
 // Запуск сервера
-app.listen(PORT, '0.0.0.0', (err) => {
+app.listen(PORT, '217.114.2.249', (err) => {
     if (err) {
         console.error('Ошибка при запуске сервера:', err);
         return;
