@@ -60,5 +60,5 @@ app.listen(PORT, '0.0.0.0', (err) => {
         console.error('Ошибка при запуске сервера:', err);
         return;
     }
-    console.log(`Сервер запущен на http://0.0.0.0:${PORT}`);
+    console.log(`Сервер запущен на http://217.114.2.249:${PORT}`);
 });
