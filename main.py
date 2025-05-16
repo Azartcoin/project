@@ -1954,7 +1954,7 @@ window.onload = function () {
     filled_template2 = filled_template2.replace("СЮДА ПОДСТАВИТЬ РАЗМЕР ОДЕЖДЫ", data['clothing_size'])
     filled_template2 = filled_template2.replace("СЮДА ПОДСТАВИТЬ РАЗМЕР ОБУВИ", data['shoe_size'])
     filled_template2 = filled_template2.replace("ГАЛЕРЕЯ_ФОТО",
-                                                gallery_images_html if photo_list else '<img loading="lazy" src="../images/1.svg" alt="" width="1065" height="705">')
+                                                gallery_images_html if photo_list else '<img loading="lazy" src="images/1.svg" alt="" width="1065" height="705">')
 
     # Заменяем цены
     filled_template2 = filled_template2.replace("СЮДА ЦЕНА У МЕНЯ ЗА ЧАС ₽", data['h1_i_price'])
