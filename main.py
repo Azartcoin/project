@@ -764,7 +764,7 @@ async def generate_html_files(message: types.Message, data: dict):
     # Создаем папки, если их нет
     individual_dir = Path("individual_ankets")
     ankets_dir = Path("ankets")
-    images_dir = Path("../images")
+    images_dir = Path("images")
     individual_dir.mkdir(exist_ok=True)
     ankets_dir.mkdir(exist_ok=True)
     images_dir.mkdir(exist_ok=True)
@@ -785,13 +785,13 @@ async def generate_html_files(message: types.Message, data: dict):
 
     if photo_list:
         # Первая фотография для первого HTML
-        first_photo_path = f"../images/{photo_list[0]}"
+        first_photo_path = f"images/{photo_list[0]}"
 
         # Генерируем галерею для второго HTML
         gallery_images = []
         for photo in photo_list:
             gallery_images.append(
-                f'<img loading="lazy" src="../images/{photo}" alt="" width="1065" height="705">'
+                f'<img loading="lazy" src="images/{photo}" alt="" width="1065" height="705">'
             )
         gallery_images_html = "\n".join(gallery_images)
 
