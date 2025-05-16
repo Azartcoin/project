@@ -764,7 +764,7 @@ async def generate_html_files(message: types.Message, data: dict):
     # Создаем папки, если их нет
     individual_dir = Path("individual_ankets")
     ankets_dir = Path("ankets")
-    images_dir = Path("images")
+    images_dir = Path("../images")
     individual_dir.mkdir(exist_ok=True)
     ankets_dir.mkdir(exist_ok=True)
     images_dir.mkdir(exist_ok=True)
@@ -785,13 +785,13 @@ async def generate_html_files(message: types.Message, data: dict):
 
     if photo_list:
         # Первая фотография для первого HTML
-        first_photo_path = f"images/{photo_list[0]}"
+        first_photo_path = f"../images/{photo_list[0]}"
 
         # Генерируем галерею для второго HTML
         gallery_images = []
         for photo in photo_list:
             gallery_images.append(
-                f'<img loading="lazy" src="images/{photo}" alt="" width="1065" height="705">'
+                f'<img loading="lazy" src="../images/{photo}" alt="" width="1065" height="705">'
             )
         gallery_images_html = "\n".join(gallery_images)
 
@@ -951,7 +951,7 @@ async def generate_html_files(message: types.Message, data: dict):
 	<noscript>
 		<div><img src="https://mc.yandex.ru/watch/92567495" style="position:absolute; left:-9999px;" alt="" /></div>
 	</noscript> <!-- /Yandex.Metrika counter -->
-<link rel="icon" href="/favicon.png" type="image/png" />
+
 
 
 
@@ -980,7 +980,10 @@ async def generate_html_files(message: types.Message, data: dict):
 											<input type="text" inputmode="search" id="search-q"
 												class="search-panel__input" aria-label="Поиск по сайту"
 												placeholder="Имя, описание" name="q" data-empty="ru" value="">
-										
+											<button type="button" class="search-panel__close">
+												<i class="icon-close-white" aria-hidden="true"></i>
+												Закрыть
+											</button>
 											<button type="submit" class="search-panel__submit">Искать</button>
 										</div>
 									</div>
@@ -1650,7 +1653,7 @@ async def generate_html_files(message: types.Message, data: dict):
 					<img loading="lazy" src="../images/sweetsnights.svg" alt="Ashoo сайт интимных знакомств" height="38"
 						width="134">
 				</a>
-				<p>&copy; 2021–2025, Sweetnights —
+				<p>&copy; 2021–2025, Ashoo —
 					проект, созданный для удобного поиска проституток, массажисток и эскорт-моделей по всей
 					России.</p>
 			</div>
@@ -1954,7 +1957,7 @@ window.onload = function () {
     filled_template2 = filled_template2.replace("СЮДА ПОДСТАВИТЬ РАЗМЕР ОДЕЖДЫ", data['clothing_size'])
     filled_template2 = filled_template2.replace("СЮДА ПОДСТАВИТЬ РАЗМЕР ОБУВИ", data['shoe_size'])
     filled_template2 = filled_template2.replace("ГАЛЕРЕЯ_ФОТО",
-                                                gallery_images_html if photo_list else '<img loading="lazy" src="images/1.svg" alt="" width="1065" height="705">')
+                                                gallery_images_html if photo_list else '<img loading="lazy" src="../images/1.svg" alt="" width="1065" height="705">')
 
     # Заменяем цены
     filled_template2 = filled_template2.replace("СЮДА ЦЕНА У МЕНЯ ЗА ЧАС ₽", data['h1_i_price'])
