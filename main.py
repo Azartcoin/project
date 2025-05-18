@@ -951,7 +951,7 @@ async def generate_html_files(message: types.Message, data: dict):
 	<noscript>
 		<div><img src="https://mc.yandex.ru/watch/92567495" style="position:absolute; left:-9999px;" alt="" /></div>
 	</noscript> <!-- /Yandex.Metrika counter -->
-
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
 
 
 
@@ -980,10 +980,6 @@ async def generate_html_files(message: types.Message, data: dict):
 											<input type="text" inputmode="search" id="search-q"
 												class="search-panel__input" aria-label="Поиск по сайту"
 												placeholder="Имя, описание" name="q" data-empty="ru" value="">
-											<button type="button" class="search-panel__close">
-												<i class="icon-close-white" aria-hidden="true"></i>
-												Закрыть
-											</button>
 											<button type="submit" class="search-panel__submit">Искать</button>
 										</div>
 									</div>
