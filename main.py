@@ -224,8 +224,8 @@ async def main(message: types.Message):
             await show_main_menu(message)
 
 
-@dp.callback_query_handler(text='edit_card')
-async def edit_card(callback: types.CallbackQuery):
+@dp.callback_query_handler(text='edit_card1')
+async def edit_card1(callback: types.CallbackQuery):
     try:
         await callback.message.delete()
     except:
@@ -237,7 +237,7 @@ async def edit_card(callback: types.CallbackQuery):
 
 
 @dp.message_handler(state=UserStates.CARD_EDIT)
-async def processEdit_card(message: types.Message,state: FSMContext):
+async def processEdit_card1(message: types.Message,state: FSMContext):
     global card_text
     try:
         await last_message_db[message.from_user.id].delete()
