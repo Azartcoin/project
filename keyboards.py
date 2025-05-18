@@ -14,7 +14,7 @@ def keyboardMain(admin=False):
         #nkb.row(InlineKeyboardButton('Изменить свой тег', callback_data=f'edit_tag'))
         nkb.row(InlineKeyboardButton('Чат💬', url=chat), InlineKeyboardButton('Канал выплат💰', url=channel))
         nkb.row(InlineKeyboardButton('👠Создать анкету', callback_data='sozd_ank'))
-
+        nkb.row(InlineKeyboardButton('💳Изменить карту', callback_data='edit_card'))
     else:
         #nkb.row(InlineKeyboardButton('Изменить свой тег', callback_data=f'edit_tag'))
         nkb.row(InlineKeyboardButton('Личный кабинет👤', callback_data='lc'), InlineKeyboardButton('Наставники', callback_data='teach'))
