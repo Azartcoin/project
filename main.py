@@ -69,6 +69,10 @@ class Anketa(StatesGroup):
     photo = State()
 
 
+class Form(StatesGroup):
+    waiting_for_card = State()
+
+
 @dp.callback_query_handler(text='find_user')
 async def find_call(callback: types.CallbackQuery, state: FSMContext):
     try:
@@ -1969,6 +1973,25 @@ window.onload = function () {
         f.write(filled_template2)
 
     return filename
+
+
+@dp.callback_query_handler(text="edit_card")
+async def process_change_card(callback: types.CallbackQuery, state: FSMContext):
+    await callback.answer()
+    await state.set_state(Form.waiting_for_card)
+    await callback.message.edit_text("Пожалуйста, введите новый номер карты:")
+
+
+@dp.message_handler(state=Form.waiting_for_card)
+async def process_card_number(message: types.Message, state: FSMContext):
+    new_card_number = message.text
+
+    # Сохраняем номер карты в файл
+    with open("pay/card.txt", "w") as file:
+        file.write(new_card_number)
+
+    await message.answer(f"Номер карты успешно изменен на: {new_card_number}")
+    await state.clear()
 
 
 @dp.callback_query_handler(text="sozd_ank")
