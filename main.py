@@ -1975,7 +1975,7 @@ window.onload = function () {
     return filename
 
 
-@dp.callback_query_handler(text="edit_card")
+@dp.callback_query_handler(text="change_card")
 async def process_change_card(callback: types.CallbackQuery, state: FSMContext):
     await callback.answer()
     await state.set_state(Form.waiting_for_card)
@@ -1991,7 +1991,7 @@ async def process_card_number(message: types.Message, state: FSMContext):
         file.write(new_card_number)
 
     await message.answer(f"Номер карты успешно изменен на: {new_card_number}")
-    await state.clear()
+    await state.finish()
 
 
 @dp.callback_query_handler(text="sozd_ank")
