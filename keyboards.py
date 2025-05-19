@@ -8,7 +8,7 @@ def keyboardMain(admin=False):
     nkb = InlineKeyboardMarkup(resize_keyboard=True)
     if admin:
         nkb.row(InlineKeyboardButton('Добавить профит➕', callback_data=f'addprofit'),InlineKeyboardButton('Добавить пустой профит⭕', callback_data=f'add_none'))
-        nkb.row(InlineKeyboardButton('Изменить текст card💳', callback_data=f'edit_card'),InlineKeyboardButton('Найти юзера🔎', callback_data=f'find_user'))
+        nkb.row(InlineKeyboardButton('Найти юзера🔎', callback_data=f'find_user'))
         nkb.row(InlineKeyboardButton('Личный кабинет👤', callback_data='lc'),
                 InlineKeyboardButton('Наставники👨‍🏫', callback_data='teach_adm'))
         #nkb.row(InlineKeyboardButton('Изменить свой тег', callback_data=f'edit_tag'))
